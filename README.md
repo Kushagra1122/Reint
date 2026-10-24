@@ -105,18 +105,3 @@ cd frontend && npm run build
 ```
 
 Tests cover post-cutoff exclusion, latest eligible selection, missing-not-zero behavior, exact timestamp alignment, non-WIND filtering, hand-calculated metrics, missing-data coverage, idempotent imports, 31 January → 1 February delivery, timezone-aware handling, and API validation.
-
-## Deployment
-
-Build `frontend/` on Vercel with `VITE_API_URL` set to the public backend URL. Deploy `backend/` to a Python-capable host using the included `Procfile`, set `WINDSIGHT_CORS_ORIGINS`, and include the read-only snapshot in the release artifact. Public deployment URLs and the unlisted demo-video URL should be added here after those account-owned steps are completed.
-
-## Limitations
-
-- WINDFOR covers wind farms visible to ESO with operational metering; FUELHH is fuel-type outturn. The asset universes may not be perfectly like-for-like.
-- The cutoff is an explicit demonstration assumption.
-- Forecast uncertainty alone cannot determine how many MW to buy without demand, contracted supply, portfolio constraints, and prices.
-- Metrics are historical descriptions, not financial-saving claims or production trading recommendations.
-
-## AI disclosure
-
-OpenAI Codex was used to assist with planning, implementation, testing, and documentation. The outputs should be reviewed and validated by the author before submission.
